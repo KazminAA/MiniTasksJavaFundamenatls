@@ -9,6 +9,6 @@ public class Main {
         System.out.println(Order.order("is2 Thi1s T4est 3a"));
         System.out.println(Dubstep.SongDecoder("RWUBWUBWUBLWUB"));
         System.out.println(Arrays.toString(Xbonacci.tribonacci(new double[]{1, 1, 1}, 10)));
-        System.out.println(VolTank.tankVol(40, 120, 3500));
+        System.out.println(Kata.expandedForm(9000000));
     }
 }
