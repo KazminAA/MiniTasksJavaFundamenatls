@@ -8,5 +8,6 @@ public class Main {
         System.out.println(Fracts.convertFrac(new long[][]{{1, 2}, {1, 3}, {1, 4}}));
         System.out.println(ApproxInter.interp(x -> Math.sin(x), 0, 21.0, 10));
         System.out.println(Opstrings.selfieDiag2Counterclock("abcd\nefgh\nijkl\nmnop"));
+        System.out.println(Dinglemouse.snakesAndLadders(new int[]{0, 0, 3, 0, 0, 0, 0, -2, 0, 0, 0}, new int[]{2, 1, 5, 1, 5, 4}));
     }
 }
