@@ -17,4 +17,19 @@ public class Kata {
         }
         return tmpresult.stream().collect(Collectors.joining(" + "));
     }
+
+    public static int[] beggars(int[] values, int n) {
+        int[] result = new int[n];
+        if (values.length < n) n = values.length;
+        for (int hb = 0; hb < n; hb++) {
+            int i = hb;
+            int sum = 0;
+            while (i < values.length) {
+                sum += values[i];
+                i += n;
+            }
+            result[hb] = sum;
+        }
+        return result;
+    }
 }
