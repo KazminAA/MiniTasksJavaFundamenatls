@@ -2,11 +2,7 @@ package com.company;
 
 public class Fracts {
     public static long gcdi(long x, long y) {
-        if (y == 0) {
-            return x;
-        } else {
-            return gcdi(y, x % y);
-        }
+        return y == 0 ? x : gcdi(y, x % y);
     }
 
     public static long lcmu(long a, long b) {

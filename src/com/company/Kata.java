@@ -1,6 +1,7 @@
 package com.company;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.stream.Collectors;
 
 public class Kata {
@@ -31,5 +32,33 @@ public class Kata {
             result[hb] = sum;
         }
         return result;
+    }
+
+    public static int[] invert(int[] array) {
+        int[] result;
+        if (array == null) result = null;
+        else {
+            result = Arrays.stream(array).map(i -> i * -1).toArray();
+        }
+        return result;
+    }
+
+    public static int findEvenIndex(int[] arr) {
+        if (arr.length == 0) return 0;
+        for (int i = 0; i < arr.length; i++) {
+            int rightSum = 0, leftSum = 0;
+            if (i != 0) {
+                for (int j = 0; j < i; j++) {
+                    leftSum += arr[j];
+                }
+            }
+            if (i != arr.length - 1) {
+                for (int j = arr.length - 1; j > i; j--) {
+                    rightSum += arr[j];
+                }
+            }
+            if (leftSum == rightSum) return i;
+        }
+        return -1;
     }
 }
