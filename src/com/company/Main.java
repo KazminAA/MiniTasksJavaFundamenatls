@@ -1,5 +1,8 @@
 package com.company;
 
+import java.util.Arrays;
+import java.util.Comparator;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,5 +18,19 @@ public class Main {
                 + "+1-099-500-8000 <Peter Crush> Labrador Bd.\n +1-931-512-4855 <William Saurin> Bison Street CQ-23071\n"
                 + "<P Salinge> Main Street, +1-098-512-2222, Denve\n" + "<P Salinge> Main Street, +1-098-512-2222, Denve\n";
         System.out.println(PhoneDir.phone(dr, "1-121-504-8974"));
+        Integer[] arr = new Integer[]{2, 4, 3, 1, 13, 10, 6, 9};
+        Comparator<Integer> comparator = Integer::compare;
+        QuickSort quickSort = new QuickSort();
+        long time = System.nanoTime();
+        quickSort.sort(arr, comparator);
+        time = System.nanoTime() - time;
+        System.out.println(Arrays.toString(arr));
+        System.out.println(time);
+        arr = new Integer[]{2, 4, 3, 1, 13, 10, 6, 9};
+        time = System.nanoTime();
+        quickSort.sort(arr, comparator);
+        time = System.nanoTime() - time;
+        System.out.println(Arrays.toString(arr));
+        System.out.println(time);
     }
 }
