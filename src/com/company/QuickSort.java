@@ -49,7 +49,7 @@ public class QuickSort {
             if (innerLeft <= innerRight) {
                 swap(array, innerLeft, innerRight);
                 innerLeft++;
-                innerRight++;
+                innerRight--;
             }
         }
 
