@@ -54,7 +54,7 @@ public class QuickSort {
         }
 
         if (begin < innerRight) qs(array, cmp, begin, innerRight);
-        if (end > innerLeft) qs(array, cmp, innerRight, end);
+        if (end > innerLeft) qs(array, cmp, innerLeft, end);
     }
 
     public void sort2(Object[] array, Comparator cmp) {
